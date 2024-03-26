@@ -58,7 +58,6 @@ body {
     align-items: center;
     background-color: var(--nav-bg-color);
     z-index: 1;
-    border: 1px solid rgb(106, 255, 0);
 }
 
 .menu__logo {
@@ -93,6 +92,7 @@ body {
     letter-spacing: 4px;
     border: none;
     cursor: pointer;
+
 }
 
 .button:hover {
@@ -141,14 +141,110 @@ body {
 
 }
 
+.header--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+    margin: auto;
+
+}
+
+.header__channels {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.header__channel {
+    object-fit: contain;
+}
+
 .header__title {
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
 }
 
-.header__title--ligth{
+.header__title--ligth {
     display: block;
     font-weight: lighter;
     font-size: 2rem;
 }
+
+.divider {
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+
+.offer {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.offer__price {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.offer__price--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.button.button--gradient {
+    background-color: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background-color 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.button.button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);}
+
+    .header__button {
+        animation: wiggle 2.2s linear infinite;
+    }
+
+    @keyframes wiggle {
+
+        0%,
+        10% {
+            transform: rotate(0);
+        }
+
+        15% {
+            transform: rotate(-15deg);
+        }
+
+        20% {
+            transform: rotate(10deg);
+        }
+
+        25% {
+            transform: rotate(-10deg);
+        }
+
+        30% {
+            transform: rotate(10deg);
+        }
+
+        35% {
+            transform: rotate(-10deg);
+        }
+
+        40%,
+        100% {
+            transform: rotate(0);
+        }
+
+
+    }
