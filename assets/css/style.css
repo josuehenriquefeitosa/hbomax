@@ -100,7 +100,6 @@ body {
 }
 
 
-
 /* -------- HEADER --------- */
 
 .header {
@@ -120,7 +119,7 @@ body {
     position: absolute;
     bottom: 0;
     background: linear-gradient(0deg, var(--primary-color), transparent);
-    z-index: 1;
+   
 }
 
 @keyframes hgradiente {
@@ -257,3 +256,80 @@ body {
     max-width: 300px;
     text-align: center;
 }
+
+/* _______________SECTION SUBSCRIPTION__________ */
+section{
+    scroll-margin-top: 80px;
+}
+
+.subscription{
+    height: 100vh;
+    background-image: url(../images/background-movies-series.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.subscription__plans{
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    margin: 40px 0;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.subscription__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 60px;
+    border-radius: 8px;
+    background: var(--card-bg-color);
+    min-height: 600px;
+    transition: transform 1s ease-in-out;
+}
+
+.subscription__plan{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+
+}
+
+.subscription__price{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    color: var(--secondary-color);
+}
+
+.subscription__price .text--small{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.subscription__goals .subscription__description{
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+
+
+
+
