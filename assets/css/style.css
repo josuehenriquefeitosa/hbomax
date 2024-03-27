@@ -106,7 +106,6 @@ body {
     position: relative;
     margin-top: 50px;
     padding: 100px 0 300px;
-    height: 100vh;
     background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
     background-size: 400% 400%;
     animation: hgradiente 10s ease infinite alternate;
@@ -119,7 +118,7 @@ body {
     position: absolute;
     bottom: 0;
     background: linear-gradient(0deg, var(--primary-color), transparent);
-   
+
 }
 
 @keyframes hgradiente {
@@ -197,7 +196,7 @@ body {
 
 .button.button--gradient {
     background: var(--btn-bg-color-gradient);
-    letter-spacing: 4px; 
+    letter-spacing: 4px;
     font-size: .85rem;
     font-weight: 700;
     padding: 16px 40px;
@@ -208,7 +207,7 @@ body {
 
 .button.button--gradient:hover {
     background: transparent;
-    color:var(--text-color) ;
+    color: var(--text-color);
     background-position: 100%;
     outline: 2px solid var(--secondary-color);
     transform: scale(1.05);
@@ -218,52 +217,53 @@ body {
     animation: wiggle 2.2s linear infinite;
 }
 
-    @keyframes wiggle {
+@keyframes wiggle {
 
-        0%,
-        10% {
-            transform: rotate(0);
-        }
-
-        15% {
-            transform: rotate(-15deg);
-        }
-
-        20% {
-            transform: rotate(10deg);
-        }
-
-        25% {
-            transform: rotate(-10deg);
-        }
-
-        30% {
-            transform: rotate(10deg);
-        }
-
-        35% {
-            transform: rotate(-10deg);
-        }
-
-        40%,
-        100% {
-            transform: rotate(0);
-        }
-
-
+    0%,
+    10% {
+        transform: rotate(0);
     }
 
-.header .text--small{
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    35% {
+        transform: rotate(-10deg);
+    }
+
+    40%,
+    100% {
+        transform: rotate(0);
+    }
+
+
+}
+
+.header .text--small {
     max-width: 300px;
     text-align: center;
 }
 
 /* _______________SECTION SUBSCRIPTION__________ */
-section{
+section {
     scroll-margin-top: 80px;
 }
 
-.subscription{
+
+.subscription {
     height: 100vh;
     background-image: url(../images/background-movies-series.png);
     background-repeat: no-repeat;
@@ -271,19 +271,19 @@ section{
     position: relative;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 24px;
     text-align: center;
 }
 
-.title{
+.title {
     font-weight: 500;
     font-size: 2rem;
 }
 
-.subscription__plans{
+.subscription__plans {
     display: flex;
     justify-content: space-around;
     gap: 80px;
@@ -292,7 +292,7 @@ section{
     perspective-origin: top;
 }
 
-.subscription__card{
+.subscription__card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -303,7 +303,7 @@ section{
     transition: transform 1s ease-in-out;
 }
 
-.subscription__plan{
+.subscription__plan {
     display: flex;
     justify-content: space-between;
     font-size: 1.25rem;
@@ -311,27 +311,36 @@ section{
 
 }
 
-.subscription__price{
+
+.subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
+    transform: rotateY(65deg);
+}
+
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2) {
+    transform: rotateY(-65deg);
+}
+
+.subscription__price {
     font-size: 2rem;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
     color: var(--secondary-color);
 }
 
-.subscription__price .text--small{
+.subscription__price .text--small {
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 300;
 }
 
-.subscription__goals .subscription__description{
+.subscription__goals .subscription__description {
     text-align: left;
     font-size: 1.25rem;
     margin-bottom: 14px;
     padding-left: 14px;
 }
 
-.subscription__goals .subscription__description::marker{
+.subscription__goals .subscription__description::marker {
     content: "+";
     font-size: 2rem;
     margin: 0 8px 0 0;
@@ -339,19 +348,19 @@ section{
 
 /* ____________SECTION CONTENTS_____________ */
 
-.contents{
+.contents {
     margin: 100px auto;
 }
 
-.contents__container{
+.contents__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 40px;
     margin-top: 40px;
 }
 
-.contents__card{
+.contents__card {
     border-radius: 16px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -360,15 +369,172 @@ section{
     transition: transform .8s, background-image .8s, border 1s;
 }
 
-.contents_image{
+.contents__card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+  }
+  
+  .contents__card:hover .contents_image {
+    opacity: 0;
+  }
+
+.contents_image {
     width: 100%;
     object-fit: cover;
     object-position: center;
     transition: opacity 2s;
 }
 
-.contents_image:hover{
-    background: none;
-    background-image: url(../images/hbo-hover_0.webp);
+
+.contents__card:nth-child(1):hover {
+    background-image: url("../images/hbo-hover_0.webp");
+  }
+  
+  .contents__card:nth-child(2):hover {
+    background-image: url("../images/MAX-Hover.webp");
+  }
+  
+  .contents__card:nth-child(3):hover {
+    background-image: url("../images/DC-Hover.webp");
+  }
+  
+  .contents__card:nth-child(4):hover {
+    background-image: url("../images/WB-Hover.webp");
+  }
+  
+  .contents__card:nth-child(5):hover {
+    background-image: url("../images/CN-Hover.png");
+  }
+  
+  .contents__card:nth-child(6):hover {
+    background-image: url("../images/UCL-Hover.webp");
+  }
+  
+
+/* _____________FOOTER_____________ */
+.footer__link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 14px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
 }
 
+.footer__link:hover {
+    color: var(--text-color);
+}
+
+.footer__legal {
+    font-size: 0.75rem;
+    margin: 16px 0;
+    color: var(--link-color);
+    font-weight: 300;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+
+
+/* ________________SCROLL_______________ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+
+/* __________MEDIA QUERIES__________ */
+
+
+@media (pointer: coarse) {
+    .contents__card:hover {
+        transform: none;
+    }
+
+    .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2),
+    .subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        padding: 32px 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .header {
+        margin-top: 128px !important;
+    }
+
+    section {
+        scroll-margin-top: 120px;
+    }
+
+    .subscription__card {
+        padding: 40px;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow: auto hidden;
+    }
+
+
+
+
+}
+
+@media screen and (min-width:481px) and (max-width: 800px) {
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1140px) {
+    .subscription__plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__card {
+        max-width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .contents__container {
+        gap: 32px;
+    }
+
+    .subscription__plans {
+        gap: 40px;
+    }
+}
